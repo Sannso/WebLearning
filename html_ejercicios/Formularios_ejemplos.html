@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<!-- Abrir en el navegador para apreciar la información -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplos de las diferentes etiquetas para formularios</title>
+  </head>
+
+  <body>
+    <center><h1>Ejemplos de las diferentes etiquetas para formularios</h1></center><br />
+
+    <h3> Etiquetas basicas para formularios: </h3>
+    <ul>
+      <li><strong>Form:</strong> Envio de datos y Sin representación grafica
+        <ul>
+          <li><strong>Atributos</strong>: </li>
+            <ul>
+              <li><strong>action</strong>: Requerido, Destino, URL absoluta/requerida</li>
+
+              <li><strong>method</strong>: representa la forma de enviar la informacion que puede
+                    ser mediante <strong>GET</strong> ó <strong>POST</strong>.
+                    Si no la información se enviara por defecto con <strong>GET</strong></li>
+
+              <li><strong>accept-charset</strong>: Codificacion de caracteres</li>
+
+              <li><strong>enctype</strong>: tipo de codificacion</li>
+            </ul>
+
+        </ul>
+      </li>
+    </ul><br />
+
+    <ul>
+      <li><strong>Input:</strong> Texto, casillas de verificacion,
+              casillas de opcion (radio), archivos, Texto enmascarado(password),
+              ocultos y botones.
+
+        <ul>
+          <li><strong>Atributos</strong>: </li>
+            <ul>
+              <li><strong>name</strong>: El atributo name es comun a todos los campos de formulario,
+                      es una cadena de texto que indica el nombre del campo al ser enviado</li>
+
+              <li><strong>type</strong>: indica en que tipo de convertira el control,
+                        por defecto es del tipo text, pero algunos de sus tipos son:<br />
+                        "text"(texto), "checkbox"(casilla de verificación),
+                        "radio"(casilla de opción *radio*), "file"(subir fichero)<br />
+                        "password"(texto enmascarado), "hidden"(campo oculto),
+                        "button"(botón), "submit"(botón de enviar)<br />
+                        "image"(imagen como boton de enviar), "reset"(boton de limpiar) </li>
+
+              <li><strong>disable</strong>: inutiliza el campo para que no pueda ser utiliado:<br />
+                  Ejemplo: <br />
+                  <input type="text" value="Ejemplo sin disable" /><br />
+                  <input type="text" value="Ejemplo con disable" disabled="disabled" />
+              </li>
+
+              <li><strong>readonly</strong>: es parecido al tipo disable,
+                      pero aplicado a text permite visualizar el texto y copiarlo<br />
+
+                Ejemplo: <br />
+                <input type="text" value="Ejemplo sin disable" /><br />
+                <input type="text" value="Ejemplo con disable" readonly="readonly" />
+              </li>
+
+              <li><strong>value</strong>: ciertos campos necesitaran tener el atributo
+                        value para completar su funcionalidad<br />
+              </li>
+            </ul>
+
+        </ul>
+      </li>
+
+<!-- identacion pora todo el siguiente codigo -->
+      <ul>
+        <ul>
+          <ul>
+<!-- ############# -->
+
+      <br /><br />Ejemplos con el tipo <strong>input</strong>: <br /><br />
+
+      <strong>"text" Campos de texto:</strong> <br /><br />
+        Representación:<ul>
+           <input type="text" /><br /><br />
+         </ul>
+        <ul>
+          Atributos de input type="text":
+          <li><strong>maxlength</strong>: Encargado de dar un limite de caracteres
+                  permitidos con un numero entero</li>
+
+          <li><strong>size</strong>: Tambien espera un numero que lo transforma
+                  en la anchura del campo de texto en caracteres</li>
+
+          <li><strong>value</strong>: indica el valor que contendra el campo por defecto</li>
+        </ul>
+
+        <br /><br />
+        <br />
+
+      <strong>"checkbox" casillas de verificacion:</strong><br /><br />
+        Representación:<ul>
+           <input type="checkbox" /> 1er. casilla <br />
+           <input type="checkbox" /> 2da. casilla <br /><br />
+         </ul>
+        <ul>
+          Atributos de input type="checkbox":
+          <li><strong>name</strong>: Cuando hay grupos de casillas de opcion multiple
+                  en mismo grupo debe llebar el mismo nombre en el atributo name
+                  <ul>
+                    Por Ejemplo (solo se aprecia en el codigo, no visual):
+                      <ul>
+                        <input type="checkbox" name="numCasilas" /> 1er. casilla <br />
+                        <input type="checkbox" name="numCasilas" /> 2da. casilla
+                      </ul>
+                  </ul>
+          </li><br />
+
+          <li><strong>checked</strong>: Indica que la casilla aparece marcada por defecto
+                <ul>
+                  Por Ejemplo:
+                    <ul>
+                      <input type="checkbox" checked="checked" /> 1er. casilla <br />
+                      <input type="checkbox"  /> 2da. casilla
+                    </ul>
+                </ul>
+
+          </li><br />
+
+          <li><strong>value</strong>: Este atributo es muy importante ya que le
+                  indica al formulario que valor debe enviar...
+                <ul>
+                  Por Ejemplo (solo se aprecia en el codigo, no visual):
+                    <ul>
+                      <input type="checkbox" value="Pcasilla" /> 1er. casilla <br />
+                      <input type="checkbox" value="Scasilla" /> 2da. casilla
+                    </ul>
+                </ul>
+
+          </li><br />
+        </ul>
+
+        <br /><br />
+        <br />
+
+      <strong>"radio" Casillas de opcion:</strong><br /><br />
+        Representación:<ul>
+           <input type="radio" /> 1er. opción <br />
+           <input type="radio" /> 2da. opción <br /><br />
+         </ul>
+        <ul>
+          Atributos de input type="radio":
+          <li><strong>name</strong>: En este caso todas las opciones deben tener el atributo name,
+                  si no, ocurre lo de la "Representación", y la idea es que tenga solo una opcion.
+                  <ul>
+                    Por Ejemplo (solo se aprecia en el codigo, no visual):
+                      <ul>
+                        <input type="radio" name="opcion"/> 1er. opción <br />
+                        <input type="radio" name="opcion"/> 2da. opción <br />
+                      </ul>
+                  </ul>
+          </li><br />
+
+          <li><strong>checked</strong>: Indica que la opcion aparece marcada por defecto
+                <ul>
+                  Por Ejemplo:
+                    <ul>
+                      <input type="radio" name="opcion" checked="checked"/> 1er. opción <br />
+                      <input type="radio" name="opcion"/> 2da. opción <br />
+                    </ul>
+                </ul>
+
+          </li><br />
+
+          <li><strong>value</strong>: Este atributo es muy importante ya que le
+                  indica al formulario que valor debe enviar...
+                <ul>
+                  Por Ejemplo (solo se aprecia en el codigo, no visual):
+                    <ul>
+                      <input type="radio" name="opcion" value="master"/> 1er. opción <br />
+                      <input type="radio" name="opcion" value="master"/> 2da. opción <br />
+                    </ul>
+                </ul>
+
+          </li><br />
+        </ul>
+
+
+        <br /><br />
+        <br />
+
+        <strong>"file" Subir un archivo:</strong><br /><br />
+        Representación:<ul>
+           <input type="file" /> <br /><br />
+           </ul>
+        <ul>
+          Atributo de input type="file":
+          <li><strong>accept</strong>: permite "filtrar" momentaneamente que tipo de archivo se puede subir
+                  (no todos los navegadores aceptan este atributo)
+                  <ul>
+                    Por Ejemplo (solo se aprecia en el codigo, no visual):
+                      <ul>
+                        <input type="file" accept="image/gif"/> <br /><br />
+                      </ul>
+                  </ul>
+                  Ya que el usuario podra escoger "todos los archivos" y hasta ahi duro el filtro.
+          </li><br />
+
+
+        <h3><strong>Importante saber que la etiqueta form tiene un atributo
+                llamado enctype<br /> que debe tener el valor "multipart/form-data"
+                 para el envio de archivos: </strong></h3><br />
+
+                <ul>
+                  form enctype="multipart/form-data"><br />
+                    <ul>
+                      input type="file" .../><br />
+                     ...<br/>
+                    </ul>
+                  /form>
+                </ul>
+        </ul>
+
+
+        <br /><br />
+        <br />
+
+        <strong>"password" Campos de texto enmascarado:</strong><br /><br />
+        Representación:<ul>
+           <input type="password" size="5"/><br />
+         </ul>
+        <ul>
+          Atributos de input type="password": Tienen los mismos atributos que los campos de tipo "text"
+
+        </ul>
+
+
+        <br /><br />
+        <br />
+
+        <strong>"hidden" Campos ocultos:</strong><br /><br />
+        Representación: (obvio no se ve por que esta oculto) sirven para enviar informacion que creamos util, pero que
+                usuario no vera ni ingresara de forma directa<ul>
+           <input type="hidden" /><br />
+         </ul>
+        <ul>
+          Atributos de input type="password": Solo son utiles los atributos
+                name y value, ya que no son visibles para el usuario.
+
+        </ul>
+
+        <br /><br />
+        <br />
+
+        <strong>"button" Botones:</strong><br /><br />
+        Representación: Hay diferentes tipos de botones y todos tienen el atributo
+              tipo <strong>value</strong> para asignarle su respectivo texto(excepto "image")...
+              <ul>
+                <input type="hidden" /><br />
+              </ul>
+        <ul>
+          <strong>Tipos de botones</strong>: <br /><br />
+
+          <strong>Tipo submit</strong>: se creara una boton un el texto enviar,
+                que enviara el formulario a su destino
+                (especificado en un atributo de la etiqueta form)<br />
+                <ul>
+                  Representación:
+                    <ul>
+                      <input type="submit" />
+                    </ul>
+                </ul>
+
+            <br /><br />
+
+          <strong>Tipo reset</strong>: se creara una boton un el texto reestablecer.
+                Reinicia el formulario como si el usuario no hubiese hecho nada.<br />
+                <ul>
+                  Representación:
+                    <ul>
+                      <input type="reset" />
+                    </ul>
+                </ul>
+
+            <br /><br />
+
+          <strong>Tipo button</strong>: Es un boton sin accion (nosotros se la damos mediante js).<br />
+                <ul>
+                  Representación:
+                    <ul>
+                      <input type="button" value="Boton sin uso"/>
+                    </ul>
+                </ul>
+
+
+            <br /><br />
+
+
+            <strong>Tipo image</strong>: Es un boton con forma de imagen sin accion
+             (nosotros se la damos mediante js), para este tipo de input se le agregan los atributos
+             alt="texto alternativo" y src="ruta a la imagen".<br />
+                <ul>
+                  Representación:
+                    <ul>
+                      <input type="image" alt="Nada" />
+                    </ul>
+                </ul>
+
+            <br /><br />
+
+            <h3>Todos estos botones estan a medio camino, el estilo y otras
+                    opciones se las daremos con <strong>CSS</strong></h3>
+
+        </ul>
+
+<!-- etiquetas de cierre de la identacion -->
+      </ul>
+    </ul>
+  </ul>
+<!-- ######## -->
+
+    </ul> <!-- etiqueta cierre de "input" -->
+
+    <br /><br />
+    <br /><br />
+
+    <ul>
+      <li><strong>Select:</strong> Permite la creacion de listas desplegables
+              y listas de seleccion multiple.<br /><br />
+
+            <ul>
+              <strong>Atributos de la etiqueta select</strong>: Ademas del
+                    atributo name que es escencial para el envio de los datos a trave del formulario... <br />
+                    <ul>
+                      <li><strong>multiple</strong>: Genera listas de seleccion multiple</li>
+                    </ul>
+            </ul><br /><br />
+
+            <ul>
+              <strong>Etiquetas para select</strong>: <br />
+
+                <ul>
+                  <li><strong>option</strong>: Se ultiliza para generar cada elemento de la lista
+                    <ul>
+                      <strong>Ejemplo de lista desplegable: </strong>
+                        <ul>
+                          <select>
+                            <option value="html"> HTML </option>
+                            <option value="css"> CSS </option>
+                          </select>
+                        </ul>
+                    </ul>
+
+                    <br /><br />
+
+                    <ul>
+                      <strong>Ejemplo de lista multiple con el atributo multiple: </strong>
+                            con este atributo tenemos que mantener presionada la tecla
+                            control en windows y comand en mac
+                        <ul>
+                          <select multiple="multiple">
+                            <option value="html"> HTML </option>
+                            <option value="css"> CSS </option>
+                          </select>
+                        </ul>
+                    </ul>
+                 </li>
+                </ul>
+
+                <br /><br />
+
+              <ul>
+                <li><strong>optgroup</strong>: Facilita el uso de listas con muchos elementos
+                  <ul>
+                    <strong>Ejemplo de lista desplegable: </strong>
+                      <ul>
+                        <select>
+                          <optgroup label="HTML">
+                            <option value="tables"> Tablas </option>
+                            <option value="forms"> Formularios </option>
+                          </optgroup>
+
+                          <optgroup label="CSS">
+                            <option value="colors"> Colores </option>
+                          </optgroup>
+                        </select>
+                      </ul>
+                  </ul>
+                </li>
+              </ul>
+            </ul>
+        </li>
+    </ul>
+
+    <br /><br /><br /><br />
+
+    <ul>
+    <li><strong>Textarea:</strong> Se utiliza para ingresar grandes cantidades de texto.<br /><br />
+
+      <ul>
+        <strong>Atributos: nuevamente saber que el atributo name es obligatorio...</strong>
+          <ul>
+            <li><strong>cols</strong>: Le otorga la anchura al cuadro de texto</li>
+            <li><strong>rows</strong>: Le otorga la altura al cuadro de texto</li>
+          </ul>
+
+          <br /><br />
+          Ejemplo:
+            <ul>
+              <textarea name="name" rows="5" cols="50"></textarea>
+            </ul>
+      </ul>
+
+    </li>
+    </ul>
+
+    <br /><br /><br /><br />
+
+    <ul>
+    <li><strong>Label:</strong> La etiqueta <strong>Label</strong> no muestra
+       absolutamente nada en pantalla, pero esta mejora la usabilidad y accesibilidad a los formularios.<br />
+       Una etiqueta Label asocia un texto a un control de forma que al pulsar sobre el texto<br />
+      se activa el control asociado en la mayoria de los navegadores</li><br /><br />
+
+      <strong>El atributo que esta usa es el for</strong><br /><br />
+      Ejemplo:
+      <ul>
+        <form>
+          <label for="html"> HTML </label>
+          <input type="radio" name="tema" id="html" /><br />
+          <label for="css"> CSS </label>
+          <input type="radio" name="tema" id="css" />
+        </form>
+      </ul>
+
+
+    </ul>
+
+    <br /><br /><br /><br />
+
+    <ul>
+    <li><strong>Fieldset:</strong> Agrupa elementos y forma un marco entre ellos. </li><br /><br />
+        <strong>El atributo que esta usa es el legend</strong><br /><br />
+
+        Ejemplo:
+        <ul>
+          <fieldset> <legend>Perfil</legend>
+            Nombre: <input type="text" name="texto"><br/><br/>
+            Contraseña: <input type="password" name="contra" >
+          </fieldset>
+          <br />
+          <fieldset> <legend>Temas</legend>
+             <input type="checkbox" name="html"> HTML 
+             <input type="checkbox" name="css"> CSS
+          </fieldset>
+        </ul><br />
+    </ul>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+
+
+</html>
