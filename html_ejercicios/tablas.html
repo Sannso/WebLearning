@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Tablas, ejemplos y como funcionan</title>
+  </head>
+
+
+  <body>
+    <h2>Tablas en html, ejemplos y como funcionan</h2><br><br>
+    <ul>
+      <strong>Como funciona o de que esta compuesta una tabla: </strong><br>
+      <ul>
+        <li>Las tablas estan compuestas por filas y celdas</li>
+        <li>La etiqueta "table" indica el inicio y final de una tabla.</li>
+        <li>La etiqueta "tr" indica o representa una fila de la tabla </li>
+        <li>La etiqueta "td" representa una celda de datos en la tabla</li>
+        <li>La etiqueta caption permiter agregar un titulo a la tabla</li>
+        <li>En las tablas es posible combinar celdas y esto se hace con los atributos colspan y rowspan</li>
+        <li>colgroup y col sirven para agrupar columnas</li>
+      </ul><br><br>
+
+      <strong>Para agregar semantica a las tablas estan las siguiente etiquetas:</strong>
+      <ul>
+        <li>La etiqueta "th" (Table Header Cell) que sustituye a td para representar la cabecera</li>
+        <li>Tambien hay etiquetas para agrupar celdas:
+            <ul>
+              <li>La etiqueta "thead" agrupa las filas de la cabecera</li>
+              <li>La etiqueta "tbody" agrupa las filas que representan el cuerpo de los datos</li>
+              <li>Y la etiqueta "tfoot" agrupa las filas del pie de la tabla</li>
+            </ul>
+        </li>
+      </ul>
+
+      <br><br><br>
+      <strong>Ejemplo de una tabla aplicando lo ya dicho: </strong><br><br>
+
+      <ul>
+
+      <table>
+        <caption>Simulation of a table</caption>
+        <thead>
+          <tr>
+            <th colspan="3">Student notes</th>
+          </tr>
+          <tr>
+            <th>Name</th><th>Note</th><th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Teemo</td><td>5.0</td><td>Reprobate</td>
+          </tr>
+          <tr>
+            <td>Morde</td><td>8.7</td><td>Approved</td>
+          </tr>
+          <tr>
+            <td>Katarina</td><td>3.0</td><td>Reprobate</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <th colspan="3">Test made in Colombia</th>
+          </tr>
+        </tfoot>
+
+      </table>
+      </ul>
+
+    </ul>
+
+
+  </body>
+
+
+</html>
