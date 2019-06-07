@@ -1,0 +1,3 @@
+Para escribir un texto y que se entienda correctamente se debe utilizar el juego de caracteres adecuado. Las migraciones se realizan cuando la página web da problemas o en el momento de conectarse a otro sistema con otra codificación, pero si no da problemas, no es aconsejable realizar una migración. Migrar un sitio web de una codificación a otra es más sencillo en Linux y macOS X ya que se realiza por línea de comandos. El comando file permite conocer el tipo y la codificación de un fichero y el comando iconv convierte la codificación de un fichero de una codificación a otra.
+
+Informacion de: Google activate
