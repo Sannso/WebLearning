@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Un ejemplo de formulario</title>
+  </head>
+
+  <body>
+    <h1>El siguiente es un ejemplo de un formulario </h1>
+    <h3>Porfavor de rellenar los campos</h3>
+    <br>
+
+    <form id="form-order">
+      <p>
+        <label for="name"><strong>Nombre (Obligatorio)</strong> |</label>
+        <input type="text" name="name" id="name"
+        placeholder="Ej. Sebastian Perez"
+        autofocus
+        autocomplete
+        required
+        >
+      </p>
+
+      <p>
+        <label for="passw"><strong>Contraseña (Obligatorio)</strong> |</label>
+        <input type="password" name="passw" id="passw"
+        placeholder="Ej. asDf123"
+        title="Ingrese aqui su contraseña"
+        pattern="[A-Z a-z]{4}[0-9]{3}"
+        required
+        > La contraseña debe tener 4 caracteres y 3 numeros en ese orden
+      </p>
+
+      <p>
+        <label for="tele"><strong>Telefono</strong> |</label>
+        <input type="tel" name="tele" id="tele" value="+57 "
+        placeholder="Ej. +57 3105150224"
+        >
+      </p>
+
+      <p>
+        <label for="eemail"><strong>Email</strong> |</label>
+        <input type="email" name="eemail" id="eemail"
+        placeholder="Ej. micorreo@hotmail.com"
+        >
+      </p>
+
+      <p>
+        <label for="urrl"><strong>Mi pagina web</strong> |</label>
+        <input type="url" name="urrl" id="urrl"
+        placeholder="Ej. mipaginawe.com"
+        >
+      </p>
+
+      <p>
+        <label for="ntemas"><strong>N° de temas</strong> |</label>
+        <input type="number" name="ntemas" id="ntemas"
+        min="2"
+        max="10"
+        placeholder="2"
+        step="2"
+        > Escoja el numero de temas (solo pares)
+      </p>
+
+      <p>
+        <label for="delivarydate"><strong>Fecha de envio</strong> |</label>
+        <input type="date" name="delivarydate" id="delivarydate"
+        min="2019-07-16"
+        > minimo el el 16 de Julio del 2019
+      </p>
+
+      <p>
+        <label for="colorexap"><strong>Color del item</strong> </label>
+        <input type="color" name="colorexap" id="colorexap"
+        value="#1A33FF"
+        >
+      </p>
+
+      <p>
+        <label for="searchS"><strong>Buscar</strong> |</label>
+        <input type="tel" name="searchS" id="searchS"
+        >
+      </p>
+
+      <p>
+        <label for="rvalues"><strong>Rango de valores</strong> </label>
+        <input type="range" name="rvalues" id="rvalues"
+        min="1"
+        max="14"
+        value="4"
+        > (Entre 1 y 14)
+      </p>
+
+      <fieldset>
+        <legend>Selecciona una prioridad</legend>
+        <p><label><input type="radio" name="priority" value="baja">Baja</label></p>
+        <p><label><input type="radio" name="priority" value="media" checked>Media</label></p>
+        <p><label><input type="radio" name="priority" value="alta">Alta</label></p>
+      </fieldset><br>
+
+      <fieldset>
+        <legend>Seleccione el tipo de envio</legend>
+        <p><label><input type="checkbox" name="delivarytype" value="urgente" checked>Urgente</label></p>
+        <p><label><input type="checkbox" name="delivarytype" value="recibo">Con recido</label></p>
+        <p><label><input type="checkbox" name="delivarytype" value="contraEntrega">Con contra entrega</label></p>
+      </fieldset><br>
+
+      <input type="submit" value="ENVIAR">
+    </form>
+
+    <br> <br> <br>
+  </body>
+</html>

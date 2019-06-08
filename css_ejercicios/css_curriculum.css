@@ -1,0 +1,17 @@
+body{
+  background-color: #6D6D6D;
+  color: #F3F3F3;
+}
+
+h1, h2{
+  font-family: Georgia;
+  font-size: 2en;
+}
+
+h1{
+  color: #A0EEE0;
+}
+
+p{
+  font-family: Comic Sans MS;
+}
